@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import * as fs from 'fs';
 import * as electron from 'electron';
-import WriteDoc from './../scripts/createDoc.js'
+import WriteDoc from './../scripts/createDoc.js';
+import ConfigBar from './config-bar/config-bar';
+import ContentEnter from './content-enter/content-enter';
+import FormatBar from './format-bar/format-bar';
 
 export default class Main extends Component {
   // state = { samplePaperObj: {}, isToggleOn: true }
@@ -2145,9 +2148,9 @@ export default class Main extends Component {
   render() {
     return (
       <div>
-        <config-bar />
-        <format-bar />
-        <content-enter />
+        <ConfigBar />
+        <FormatBar />
+        <ContentEnter />
       </div>
     );
   }
