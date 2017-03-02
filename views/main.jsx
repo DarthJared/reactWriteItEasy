@@ -2145,10 +2145,14 @@ export default class Main extends Component {
   render() {
     return (
       <div>
-        <div>Hello from React with ES6 by Jared :)</div>
-        <button type="button" onClick={this.write}>Write</button>
+        <config-bar />
+        <format-bar />
+        <content-enter />
       </div>
     );
   }
-  
+  // <div>
+  //       <div>Hello from React with ES6 by Jared :)</div>
+  //       <button type="button" onClick={this.write}>Write</button>
+  //     </div>
 }

@@ -13,6 +13,7 @@
     "babel-preset-react": "^6.3.13",
     "babel-register": "^6.3.13",
     "fs": "0.0.1-security",
+    "lodash": "^4.17.4",
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
   },
