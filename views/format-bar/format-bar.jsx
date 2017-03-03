@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styles from './format-bar.css';
+import FontsConfig from './../../scripts/fonts.js'
 
 export default class FormatBar extends Component {
     constructor(props) {
@@ -7,6 +8,17 @@ export default class FormatBar extends Component {
     }
 
     render() {
+        var fontOptions = FontsConfig.getFonts();
+        var fontSizes = FontsConfig.getSizes();
+
+        var fontOptionsHtml = fontOptions.map((option) => {
+            <option>{option}</option>
+        });
+
+        var fontSizesHtml = fontSizes.map((size) => {
+            <option>{size}</option>
+        });
+
         return (
             <div class={styles.outside}>
                 <div class={styles.topBar + " " + styles.opened}></div>
@@ -18,18 +30,18 @@ export default class FormatBar extends Component {
                     </div>
                     <div class={styles.fontOptions}>
                         <select class={styles.fontSelect}>
-                            <option *ngFor="#option of fontsService.options">{{option}}</option>
+                            {fontOptionsHtml}
                         </select>
-                        <select class="fontSelect">
-                            <option *ngFor="#size of fontsService.sizes">{{size}}</option>
+                        <select class={styles.fontSelect}>
+                            {fontSizesHtml}
                         </select>
                     </div>
-                    <div class="moreFormatButtons">
-                        <i class="material-icons formatButton">format_indent_increase</i>
-                        <i class="material-icons formatButton">format_indent_decrease</i>        
+                    <div class={styles.moreFormatButtons}>
+                        <i class={styles.formatButton + " material-icons"}>format_indent_increase</i>
+                        <i class={styles.formatButton + " material-icons"}>format_indent_decrease</i>        
                     </div>
-                    <div class="quoteButton">
-                        <i class="material-icons firstQuote">format_quote</i>
+                    <div class={syltes.quoteButton}>
+                        <i class={styles.firstQuote + " material-icons"}>format_quote</i>
                         <i class="material-icons">format_quote</i>
                     </div>
                 </div>
