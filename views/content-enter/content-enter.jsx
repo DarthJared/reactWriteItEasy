@@ -9,7 +9,7 @@ export default class ContentEnter extends Component {
 
     render() {
         return (
-           <div class={styles.backDropOpen}>
+           <div class={styles.backDrop + " " + styles.open}>
                 <div class={styles.innerWrap}>
                     <PaperBack />
                 </div>
